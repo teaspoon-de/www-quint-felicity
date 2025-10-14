@@ -4,6 +4,10 @@ services:
     container_name: quint-felicity
     ports:
       - "8080:80"
+    environment:
+      VIRTUAL_HOST: quint-felicity.de,www.quint-felicity.de
+      LETSENCRYPT_HOST: quint-felicity.de,www.quint-felicity.de
+      LETSENCRYPT_EMAIL: info@quint-felicity.de
     volumes:
       - ./public:/var/www/html
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf

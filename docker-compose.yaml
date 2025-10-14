@@ -7,7 +7,7 @@ services:
       LETSENCRYPT_HOST: quint-felicity.de,www.quint-felicity.de
       LETSENCRYPT_EMAIL: info@quint-felicity.de
     volumes:
-      - ./public:/usr/share/nginx/html:ro
+      - ./public:/var/www/html:ro
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - php

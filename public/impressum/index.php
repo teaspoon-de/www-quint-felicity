@@ -38,12 +38,12 @@
                 <h1>Angaben gemäß § 5 TMG:</h1>
                 <p>Quint Felicity<br>
                 Vertreten durch: Alex Buss<br> 
-                Musterstraße 12<br>
-                12345 Musterstadt</p>
+                Anxbachstraße 16<br>
+                53562 Sankt Katharinen</p>
                 <p>Kontakt:<br>
                 E-Mail: info@quint-felicity.de</p>
                 <p>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:<br>
-                Alex Buss, Musterstraße 12, 12345 Musterstadt</p>
+                Alex Buss, Anxbachstraße 16, 53562 Sankt Katharinen</p>
 
                 <h1>Haftungsausschluss:</h1>
                 <p>Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links.<br>

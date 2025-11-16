@@ -22,6 +22,19 @@ services:
       - phpnet
       - dbnet
 
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root # das kann nicht sicher sein
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+    ports:
+      - "3306:3306" # unnötog? gui geht prob eh nicht
+    networks:
+      - dbnet
+
 networks:
   webnet:
     external: false

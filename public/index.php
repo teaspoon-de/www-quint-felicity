@@ -81,7 +81,7 @@
             <p>  
                 <a href="/impressum/">Impressum</a>
             </p>
-            <p>© 2025 Quint Felicity</p>
+            <p>&copy; <?= date("Y") ?> Quint Felicity</p>
         </div>
     </section>
 

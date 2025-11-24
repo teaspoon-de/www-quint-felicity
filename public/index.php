@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Quint Felicity - Band</title>
-	<description>Quint Felicity ist eine junge Band aus Rheinland-Pfalz mit modernen Coversongs und guter Stimmung! Entdecke unsere Musik und aktuellen Auftritte.</description>
+    <link rel="icon" type="" href="/resources/LogoRotICO.png">
 	<link rel="canonical" href="https://quint-felicity.de/">
 
 	<!-- Open Graph Meta Tags -->
@@ -28,7 +28,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Special+Elite">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	<link rel="stylesheet" href="/css/style.css">
-    <link rel="icon" type="" href="/resources/LogoRotICO.png">
 </head>
 <body>
 

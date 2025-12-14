@@ -31,30 +31,6 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube-icon lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
         </div>
     </div>
-    
-    <section id="impressum">
-        <article>
-            <p>
-                <h1>Angaben gemäß § 5 TMG:</h1>
-                <p>Quint Felicity<br>
-                Vertreten durch: Alexander Buss<br> 
-                Anxbachstraße 16<br>
-                53562 Sankt Katharinen</p>
-                <p>Kontakt:<br>
-                E-Mail: info@quint-felicity.de</p>
-                <p>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:<br>
-                Alexander Buss, Anxbachstraße 16, 53562 Sankt Katharinen</p>
-
-                <h1>Haftungsausschluss:</h1>
-                <p>Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links.<br>
-                Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
-
-                <h1>Urheberrecht:</h1>
-                <p>Alle Inhalte (Texte, Bilder, Musik) dieser Seite unterliegen dem Urheberrecht.<br>
-                Verwendung nur mit ausdrücklicher Genehmigung.</p>
-            </p>
-        </article>
-    </section>
 
 
     <section id="footer">

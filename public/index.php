@@ -5,3 +5,14 @@ if (session_status() === PHP_SESSION_NONE) session_start();
 if (empty($_SESSION["csrf_token"])) $_SESSION["csrf_token"] = bin2hex(random_bytes(32));
 
 require_once __DIR__ . '/../src/Router.php';
+
+require_once __DIR__ . '/../src/Controllers/Controller.php';
+require_once __DIR__ . '/../src/Models/Blogpost.php';
+require_once __DIR__ . '/../src/Models/Image.php';
+
+$router = new Router();
+
+$router->get('/', [Controller::class, 'index']);
+$router->get('/impressum', [Controller::class, 'impressum']);
+
+$router->run();

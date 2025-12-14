@@ -22,6 +22,7 @@ services:
     volumes:
       - ./public:/var/www/html/public:ro
       - ./src:/var/www/html/src:ro
+      - ./uploads:/var/www/html/uploads
     working_dir: /var/www/html
     networks:
       - phpnet

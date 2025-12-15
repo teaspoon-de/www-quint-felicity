@@ -1,0 +1,21 @@
+#impressum {
+    color: var(--text);
+    background-color: var(--bg);
+    padding-top: 120px;
+    padding-bottom: 50px;
+    margin-bottom: 100px;
+}
+#impressum article {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+#impressum h1 {
+    font-size: 35px;
+    margin-top: 50px;
+}
+#impressum p {
+    font-size: 23px;
+    margin-top: 20px;
+}

@@ -1,8 +1,8 @@
 <head>
 	<meta charset="UTF-8" />
-	<title>Quint Felicity - Band</title>
+	<title><?= $pageTitle?></title>
     <link rel="icon" type="" href="/resources/LogoRotICO.png">
-	<link rel="canonical" href="https://quint-felicity.de/">
+	<link rel="canonical" href="<?= $canonical?>">
 
 	<!-- Open Graph Meta Tags -->
 	<meta property="og:title" content="Quint Felicity – Pop & Rock Band">

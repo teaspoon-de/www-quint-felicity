@@ -15,6 +15,17 @@ class Blogpost {
         return $posts;
     }
 
+    public static function allLimit(int $limit): array {
+        $pdo = Database::getConnection();
+        $stmt = $pdo->query("SELECT * FROM blogposts ORDER BY created_at DESC LIMIT ". $limit);
+        $posts = $stmt->fetchAll();
+        for ($i = 0; $i < count($posts); $i++) {
+            $cover = Image::find($posts[$i]["cover_id"]);
+            $posts[$i]["cover_uri"] = $cover["uri"];
+        }
+        return $posts;
+    }
+
     public static function find(int $id): ?array {
         $pdo = Database::getConnection();
         $stmt = $pdo->prepare("SELECT * FROM blogposts WHERE id = ?");
@@ -22,6 +33,7 @@ class Blogpost {
         $blogpost = $stmt->fetch();
         $cover = Image::find($blogpost["cover_id"]);
         $blogpost["cover_uri"] = $cover["uri"];
+        $blogpost["cover_alt"] = $cover["alt"];
         return $blogpost ?: null;
     }
 

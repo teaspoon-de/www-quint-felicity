@@ -1,0 +1,26 @@
+#topbarBg {
+    position: fixed;
+    height: 120px;
+    width: 100%;
+    background-color: var(--text);
+    z-index: 490;
+}
+#topbar {
+    position: fixed;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 500;
+    color: var(--bg);
+}
+#topbar .menuIcon {
+    align-self: center;
+    margin-right: 40px;
+}
+#topbar img {
+    height: 80px;
+    justify-self: center;
+}

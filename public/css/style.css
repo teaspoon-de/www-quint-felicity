@@ -24,7 +24,6 @@ html, body {
     height: 100%;
     width: 100%;
     /*background-color: #2f3136;*/
-    overflow-x: hidden;
     /*font-family: trebuchet ms, sans-serif;*/
     color: var(--text);
     background-color: var(--text);
@@ -44,14 +43,13 @@ html, body {
 
 
 section {
-    width: 100%;
     display: flex;
     z-index: 500;
     padding-top: 100px;
     padding-bottom: 100px;
 }
 
-button {
+button, .button {
     color: var(--text);
     background-color: var(--bg);
     padding: 20px;
@@ -61,21 +59,15 @@ button {
     font-weight: 800;
     font-size: 23px;
     width: fit-content;
+    outline: none;
+    border: 1px solid var(--text);
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
-.button {
-    color: var(--text);
-    background-color: var(--bg);
-    padding: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    box-shadow: 5px 5px 0px var(--text);
-    font-weight: 800;
-    font-size: 23px;
-    text-decoration: none;
-    width: fit-content;
-    border-width: 1px;
-    border-style: solid;
-    border-color: var(--text);
+button svg, .button svg {
+    height: 29px;
+    width: 29px;
 }
 
 h2 {
@@ -87,6 +79,10 @@ p {
     font-size: 23px;
     cursor: pointer;
 }
+a {
+    color: var(--text);
+    text-decoration: none;
+}
 
 
 .artShort {
@@ -95,213 +91,89 @@ p {
     justify-content: center;
     align-items: center;
     gap: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 .artShort h1 {
     text-align: center;
     font-family: var(--fontHead);
+    color: var(--text);
     font-size: 60px;
 }
 .artShort article {
-    gap: 40px;
-    padding-left: 40px;
-    padding-right: 40px;
+    width: 100%;
     display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1000px;
 }
 .artShort article img {
+    float: left;
     width: 250px;
-    height: 250px;
+    flex-basis: 250px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     box-shadow: 5px 5px 0px var(--text);
 }
 .artShort article .noShadow {
     box-shadow: none;
 }
-.artShort div {
+.artShort article div {
+    height: 250px;
+    flex-grow: 1;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
     justify-content: center;
 }
-.artShort div h2 {
-    font-family: var(--fontHead);
+.artShort article div h2 {
+    margin-top: -4px;
+    padding-top: 4px;
     font-size: 30px;
+    flex-basis: 30px;
+    height: 34px;
+    min-height: 34px;
+    max-width: calc(100vw - 370px)!important;
+    font-family: var(--fontHead);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-x: hidden;
 }
-.artShort div h4 {
+.artShort article div date {
     font-size: 20px;
+    font-weight: 400;
+    flex-basis: 26px;
     color: var(--textCon);
     margin-top: -18px;
     margin-bottom: -18px;
 }
+.artShort article div p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: justify;
+}
+.artShort article div .button {
+    flex-basis: 29px;
+}
+
+
 .reverseCol {
     color: var(--bg);
     background-color: var(--text);
 }
+.reverseCol h1 {
+    color: var(--bg);
+}
 .reverseCol article img {
     box-shadow: 5px 5px 0px var(--bg);
 }
-.reverseCol div h4 {
-    font-size: 20px;
+.reverseCol article div date {
     color: var(--bgCon);
 }
-.reverseCol article button {
+.button.reverseCol {
     color: var(--bg);
     background-color: var(--text);
     box-shadow: 5px 5px 0px var(--bg);
     border-color: var(--bg);
-}
-
-
-
-
-#topbarBg {
-    position: fixed;
-    height: 120px;
-    width: 100%;
-    background-color: var(--text);
-    z-index: 4900;
-}
-#topbar {
-    position: fixed;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    height: 80px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    z-index: 5000;
-    color: var(--bg);
-}
-#topbar .menuIcon {
-    align-self: center;
-    margin-right: 40px;
-}
-#topbar img {
-    margin-left: 100px;
-    height: 80px;
-    justify-self: center;
-}
-
-
-#menu {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 100%;
-    z-index: 4975;
-    background-color: var(--blackShade);
-    display: none;
-    flex-direction: column;
-    color: var(--bg);
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-}
-#menu p {
-    font-size: 50px;
-    text-align: center;
-}
-#menu p:hover {
-    text-decoration: underline;
-}
-#menu p a {
-    text-decoration: none;
-    color: var(--bg);
-}
-#menu .social {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-
-
-#intro {
-    top: 100px;
-    flex-direction: column;
-    background-color: var(--text);
-    color: var(--bg);
-    padding-top: 0px;
-}
-#intro img {
-    z-index: 4950;
-    width: 100%;
-}
-#intro .slogan {
-    padding: 80px;
-    padding-top: 100px;
-    padding-bottom: 50px;
-    text-align: center;
-    font-size: 60px;
-    font-family: var(--fontHead);
-}
-#intro div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-#intro div p {
-    font-size: 23px;
-    width: 200px;
-}
-#intro div button {
-    color: var(--bg);
-    background-color: var(--text);
-    box-shadow: 5px 5px 0px var(--bg);
-}
-#intro div .button {
-    color: var(--bg);
-    background-color: var(--text);
-    box-shadow: 5px 5px 0px var(--bg);
-    border-color: var(--bg);
-}
-
-
-
-
-#footer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    color: var(--bg);
-    background-color: var(--text);
-}
-#footer p {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-#footer p a {
-    color: var(--bg);
-    text-decoration: none;
-}
-#footer p a:hover {
-    text-decoration: underline;
-}
-
-
-
-
-
-#impressum {
-    color: var(--text);
-    background-color: var(--bg);
-    padding-top: 130px;
-    padding-bottom: 200px;
-}
-#impressum article {
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-}
-#impressum h1 {
-    font-size: 35px;
-    margin-top: 50px;
-}
-#impressum p {
-    font-size: 23px;
-    margin-top: 20px;
 }

@@ -1,0 +1,101 @@
+#intro {
+    top: 100px;
+    flex-direction: column;
+    background-color: var(--text);
+    color: var(--bg);
+    padding-top: 0px;
+}
+#intro img {
+    z-index: 495;
+    width: 100%;
+}
+#intro .slogan {
+    z-index: 496;
+    padding: 80px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-size: 60px;
+    font-family: var(--fontHead);
+}
+#intro div {
+    z-index: 496;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#intro div p {
+    font-size: 23px;
+    width: 200px;
+}
+
+#heroM {
+    display: block;
+}
+#hero {
+    display: none;
+}
+
+@media only screen and (min-width: 1300px) {
+    #heroM {
+        display: none;
+    }
+    #hero {
+        display: block;
+    }
+    #intro {
+        padding-bottom: 0px;
+    }
+    #intro .slogan {
+        background-color: var(--invis);
+        margin-top: -240px;
+        padding-bottom: 0px;
+    }
+
+    
+
+    .standartCol {
+        color: var(--bg);
+        background-color: var(--text);
+    }
+    .standartCol h1 {
+        color: var(--bg);
+    }
+    .standartCol article img {
+        box-shadow: 5px 5px 0px var(--bg);
+    }
+    .artShort.standartCol article div date {
+        color: var(--bgCon);
+    }
+    .standartCol .button {
+        color: var(--bg);
+        background-color: var(--text);
+        box-shadow: 5px 5px 0px var(--bg);
+        border-color: var(--bg);
+    }
+
+    .reverseCol {
+        color: var(--text);
+        background-color: var(--bg);
+    }
+    .reverseCol h1 {
+        color: var(--text);
+    }
+    .reverseCol article img {
+        box-shadow: 5px 5px 0px var(--text);
+    }
+    .reverseCol article div date {
+        color: var(--textCon);
+    }
+    .artShort .button.reverseCol {
+        color: var(--text);
+        background-color: var(--bg);
+        box-shadow: 5px 5px 0px var(--text);
+        border-color: var(--text);
+    }
+
+    #footer {
+        padding-top: 40px;
+    }
+}

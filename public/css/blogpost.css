@@ -1,19 +1,24 @@
+#aktuelles {padding-top: 40px}
 .blogpost {
-    padding-top: 120px;
     margin-bottom: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.blogpost .title {
+.blogpost #back {
+    position: absolute;
+    color: var(--text);
+    height: 80px;
+}
+.blogpost .titleDiv {
     background-color: var(--bg);
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.blogpost .title div {
-    flex-grow: 1;
+.blogpost .titleDiv .title {
+    width: 100%;
     min-height: 126px;
     padding-top: 80px;
     padding-bottom: 40px;
@@ -25,24 +30,23 @@
     justify-content: end;
     gap: 20px;
 }
-
-.blogpost .title h1 {
+.blogpost .titleDiv .title h1 {
     font-family: var(--fontHead);
     font-size: 40px;
 }
-.blogpost .title date {
+.blogpost .titleDiv .title date {
     color: var(--textCon);
     font-size: 20px;
     font-weight: 900;
 }
 .blogpost .content {
     text-align: justify;
-    padding: 40px;
-    max-width: 1000px;
+    width: 100%;
+    max-width: 1080px;
 }
 .blogpost .content img {
-    margin-top: -207px;
-    margin-right: 40px;
+    margin: 40px;
+    margin-top: -167px;
     margin-bottom: 30px;
     float: left;
     width: 250px;
@@ -52,6 +56,7 @@
     box-shadow: 5px 5px 0px var(--bg);
 }
 .blogpost .content p {
+    padding: 40px;
     color: var(--bg);
     font-size: 25px;
 }

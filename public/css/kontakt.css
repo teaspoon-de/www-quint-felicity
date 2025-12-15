@@ -1,0 +1,22 @@
+.kontakt {
+    margin: 40px;
+    border: 1px solid var(--bg);
+    max-width: 918px;
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    color: var(--bg);
+    align-items: center;
+    flex-direction: column;
+    justify-self: center;
+}
+.kontakt h1 {
+    height: 50px;
+    text-align: center;
+    font-family: var(--fontHead);
+    color: var(--bg);
+    font-size: 60px;
+}
+.kontakt p a {
+    color: var(--bgCon);
+}

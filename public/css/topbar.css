@@ -1,3 +1,4 @@
+
 #topbarBg {
     position: fixed;
     height: 120px;
@@ -5,7 +6,7 @@
     background-color: var(--text);
     z-index: 490;
 }
-#topbar {
+header {
     position: fixed;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -16,11 +17,54 @@
     z-index: 500;
     color: var(--bg);
 }
-#topbar .menuIcon {
+header .menuIcon {
     align-self: center;
     margin-right: 40px;
 }
-#topbar img {
+header img {
     height: 80px;
     justify-self: center;
+}
+.abstand {
+    position: block;
+    height: 120px;
+    width: 100%;
+    padding: 0;
+}
+
+
+nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 497;
+    background-color: var(--blackShade);
+    display: none;
+    flex-direction: column;
+    color: var(--bg);
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+nav p {
+    font-size: 50px;
+    text-align: center;
+}
+nav p:hover {
+    text-decoration: underline;
+}
+nav p a {
+    text-decoration: none;
+    color: var(--bg);
+}
+nav .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+nav .social svg {
+    color: var(--bg);
 }

@@ -39,6 +39,14 @@ html, body {
 .null {
     display: none;
 }
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 
 
@@ -64,20 +72,15 @@ button, .button {
     display: flex;
     gap: 10px;
     align-items: center;
+    cursor: pointer;
 }
 button svg, .button svg {
     height: 29px;
     width: 29px;
 }
 
-h2 {
-    font-family: var(--fontHead);
-    font-size: 30px;
-}
-
 p {
     font-size: 23px;
-    cursor: pointer;
 }
 a {
     color: var(--text);
@@ -94,7 +97,7 @@ a {
     padding-left: 40px;
     padding-right: 40px;
 }
-.artShort h1 {
+.artShort .secTitle {
     text-align: center;
     font-family: var(--fontHead);
     color: var(--text);
@@ -127,7 +130,7 @@ a {
     gap: 20px;
     justify-content: center;
 }
-.artShort article div h2 {
+.artShort article div .title {
     margin-top: -4px;
     padding-top: 4px;
     font-size: 30px;
@@ -151,7 +154,6 @@ a {
 .artShort article div p {
     text-overflow: ellipsis;
     overflow: hidden;
-    text-align: justify;
 }
 .artShort article div .button {
     flex-basis: 29px;
@@ -162,7 +164,7 @@ a {
     color: var(--bg);
     background-color: var(--text);
 }
-.reverseCol h1 {
+.reverseCol .secTitle {
     color: var(--bg);
 }
 .reverseCol article img {
@@ -176,4 +178,46 @@ a {
     background-color: var(--text);
     box-shadow: 5px 5px 0px var(--bg);
     border-color: var(--bg);
+}
+
+#back {
+    color: var(--bg);
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    max-width: 1080px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-self: center;
+}
+#back svg {
+    margin-left: 40px;
+}
+
+.inWork {
+    margin: 40px;
+    border: 1px solid var(--bg);
+    box-shadow: 5px 5px 0px var(--bg);
+    max-width: 1000px;
+    display: flex;
+    gap: 10px;
+    padding: 40px;
+    color: var(--bg);
+    align-items: center;
+    flex-direction: column;
+    justify-self: center;
+}
+.inWork svg {
+    height: 70px;
+    width: 70px;
+    padding: 10px;
+    border-radius: 100%;
+    background-color: var(--bg);
+    color: var(--text);
+}
+.inWork p {
+    max-width: 400px;
+    text-align: center;
+    width:fit-content;
 }

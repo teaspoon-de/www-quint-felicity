@@ -1,5 +1,4 @@
-<link rel="stylesheet" href="/css/footer.css">
-<section id="footer">
+<footer>
     <div class="quickLinks">
         <p>
             Menu:
@@ -10,8 +9,9 @@
         </p>
         <p>  
             <a href="/kontakt">Kontakt</a>|
+            <a href="https://member.quint-felicity.de">Mitglieder-Bereich</a>|
             <a href="/impressum">Impressum</a>
         </p>
         <p>&copy; <?= date("Y") ?> Quint Felicity</p>
     </div>
-</section>
+</footer>

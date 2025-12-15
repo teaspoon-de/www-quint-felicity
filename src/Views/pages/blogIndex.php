@@ -1,5 +1,8 @@
-<section id="aktuelles" class="artShort reverseCol" style="padding-top: 180px;">
-    <h1>BLOG - AKTUELLES</h1>
+<?php 
+$backTo = 'Zurück zur Startseite';
+require __DIR__ . "/../layout/back.php";?>
+<section id="aktuelles" class="artShort reverseCol">
+    <h1 class="secTitle">BLOG - AKTUELLES</h1>
     <?php foreach($blogposts as $post): ?>
     <article>
         <img src="<?= "/resources/uploads/".htmlspecialchars($post['cover_uri'] ?? '') ?>">

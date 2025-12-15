@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="/css/impressum.css">
 <section id="impressum">
     <article>
         <h1>Angaben gemäß § 5 TMG:</h1>

@@ -6,7 +6,7 @@ class Blogpost {
 
     public static function all(): array {
         $pdo = Database::getConnection();
-        $stmt = $pdo->query("SELECT * FROM blogposts ORDER BY created_at DESC");
+        $stmt = $pdo->query("SELECT * FROM blogposts WHERE publish=1 ORDER BY created_at DESC");
         $posts = $stmt->fetchAll();
         for ($i = 0; $i < count($posts); $i++) {
             $cover = Image::find($posts[$i]["cover_id"]);
@@ -17,7 +17,7 @@ class Blogpost {
 
     public static function allLimit(int $limit): array {
         $pdo = Database::getConnection();
-        $stmt = $pdo->query("SELECT * FROM blogposts ORDER BY created_at DESC LIMIT ". $limit);
+        $stmt = $pdo->query("SELECT * FROM blogposts WHERE publish=1 ORDER BY created_at DESC LIMIT ". $limit);
         $posts = $stmt->fetchAll();
         for ($i = 0; $i < count($posts); $i++) {
             $cover = Image::find($posts[$i]["cover_id"]);

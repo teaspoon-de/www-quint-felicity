@@ -1,3 +1,4 @@
+.abstand {display: none;}
 #intro {
     top: 100px;
     flex-direction: column;
@@ -26,8 +27,9 @@
     gap: 20px;
 }
 #intro div p {
-    font-size: 23px;
-    width: 200px;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
 
 #heroM {
@@ -59,7 +61,7 @@
         color: var(--bg);
         background-color: var(--text);
     }
-    .standartCol h1 {
+    .standartCol .secTitle {
         color: var(--bg);
     }
     .standartCol article img {
@@ -79,7 +81,7 @@
         color: var(--text);
         background-color: var(--bg);
     }
-    .reverseCol h1 {
+    .reverseCol .secTitle {
         color: var(--text);
     }
     .reverseCol article img {
@@ -95,7 +97,7 @@
         border-color: var(--text);
     }
 
-    #footer {
+    footer {
         padding-top: 40px;
     }
 }

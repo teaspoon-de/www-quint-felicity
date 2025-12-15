@@ -1,8 +1,18 @@
 <head>
 	<meta charset="UTF-8" />
 	<title><?= $pageTitle?></title>
+
     <link rel="icon" type="" href="/resources/LogoRotICO.png">
+	<link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/topbar.css">
+	<?php foreach($css as $cs):?>
+    <link rel="stylesheet" href="/css/<?=$cs?>.css">
+	<?php endforeach;?>
+    <script src="/js/script.js"></script>
+
 	<link rel="canonical" href="<?= $canonical?>">
+	<meta name="description" content="<?= $description ?: ''?>">
 
 	<!-- Open Graph Meta Tags -->
 	<meta property="og:title" content="Quint Felicity – Pop & Rock Band">
@@ -25,5 +35,4 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Special+Elite">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-	<link rel="stylesheet" href="/css/style.css">
 </head>

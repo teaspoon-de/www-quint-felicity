@@ -19,45 +19,57 @@ class Controller {
     public function index() {
         $blogposts = Blogpost::allLimit(5);
         $pageTitle = 'Quint Felicity - Band';
+        $description = 'Quint Felicity ist eine junge Band aus Rheinland-Pfalz mit modernen Coversongs und guter Stimmung! Entdecke unsere Musik und aktuellen Auftritte.';
+        $css = array('index');
         $canonical = 'https://quint-felicity.de';
-        $this->render('pages/index', compact('blogposts', 'pageTitle', 'canonical'));
+        $this->render('pages/index', compact('blogposts', 'pageTitle', 'canonical', 'description', 'css'));
     }
 
     public function impressum() {
         $pageTitle = 'Impressum - Quint Felicity';
+        $description = '';
+        $css = array('impressum');
         $canonical = 'https://quint-felicity.de/impressum';
-        $this->render('pages/impressum', compact('pageTitle', 'canonical'));
+        $this->render('pages/impressum', compact('pageTitle', 'canonical', 'description', 'css'));
     }
 
     public function ueberUns() {
         $pageTitle = 'Über Uns - Quint Felicity';
+        $description = '';
         $canonical = 'https://quint-felicity.de/ueber-uns';
-        $this->render('pages/ueberUns', compact('pageTitle', 'canonical'));
+        $this->render('pages/inWork', compact('pageTitle', 'canonical', 'description', 'css'));
     }
 
     public function blogIndex() {
         $blogposts = Blogpost::all();
         $pageTitle = 'Blog - Quint Felicity';
+        $description = '';
+        $css = array('blogpost');
         $canonical = 'https://quint-felicity.de/blog';
-        $this->render('pages/blogIndex', compact('blogposts', 'pageTitle', 'canonical'));
+        $this->render('pages/blogIndex', compact('blogposts', 'pageTitle', 'canonical', 'description', 'css'));
     }
 
     public function blogShow($id) {
         $blogpost = Blogpost::find($id);
         $pageTitle = 'Blog - Quint Felicity';
+        $description = '';
+        $css = array('blogpost');
         $canonical = 'https://quint-felicity.de/blog/'.$id;
-        $this->render('pages/blogShow', compact('blogpost', 'pageTitle', 'canonical'));
+        $this->render('pages/blogShow', compact('blogpost', 'pageTitle', 'canonical', 'description', 'css'));
     }
 
     public function veranstalter() {
         $pageTitle = 'Für Veranstalter - Quint Felicity';
+        $description = '';
         $canonical = 'https://quint-felicity.de/fuer-veranstalter';
-        $this->render('pages/veranstalter', compact('pageTitle', 'canonical'));
+        $this->render('pages/inWork', compact('pageTitle', 'canonical', 'description', 'css'));
     }
 
     public function kontakt() {
         $pageTitle = 'Kontakt - Quint Felicity';
+        $description = '';
+        $css = array('kontakt');
         $canonical = 'https://quint-felicity.de/kontakt';
-        $this->render('pages/kontakt', compact('pageTitle', 'canonical'));
+        $this->render('pages/kontakt', compact('pageTitle', 'canonical', 'description', 'css'));
     }
 }

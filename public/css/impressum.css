@@ -1,7 +1,7 @@
 #impressum {
     color: var(--text);
     background-color: var(--bg);
-    padding-top: 120px;
+    padding-top: 0;
     padding-bottom: 50px;
     margin-bottom: 100px;
 }

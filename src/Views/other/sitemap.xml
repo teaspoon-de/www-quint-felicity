@@ -27,7 +27,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>'
 
   <?php foreach ($blogposts as $post): ?>
   <url>
-    <loc>https://quint-felicity.de/blog/<?= $post['id'] ?></loc>
+    <loc>https://quint-felicity.de/blog/<?= $post['slug'] ?></loc>
     <lastmod><?= date('Y-m-d', strtotime($post['last_edit'])) ?></lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.4</priority>

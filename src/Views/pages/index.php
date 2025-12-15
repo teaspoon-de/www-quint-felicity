@@ -45,7 +45,7 @@ function getArticleCol(int $count):string {
             <h2 class="title"># <?= htmlspecialchars($post['title']) ?></h2>
             <date>- <?= date('Y-m-d', strtotime($post['date'])) ?> -</date>
             <p><?= substr(htmlspecialchars($post['content'] ?? ''), 0, 256) ?></p>
-            <a href="/blog/<?= $post['id']?>" class="button <?= getArticleCol($count)?>">Mehr lesen</a>
+            <a href="/blog/<?= $post['slug']?>" class="button <?= getArticleCol($count)?>">Mehr lesen</a>
         </div>
     </article>
     <?php endforeach; ?>

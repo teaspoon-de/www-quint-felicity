@@ -26,10 +26,10 @@ class Blogpost {
         return $posts;
     }
 
-    public static function find(int $id): ?array {
+    public static function find(string $slug): ?array {
         $pdo = Database::getConnection();
-        $stmt = $pdo->prepare("SELECT * FROM blogposts WHERE id = ?");
-        $stmt->execute([$id]);
+        $stmt = $pdo->prepare("SELECT * FROM blogposts WHERE slug = ?");
+        $stmt->execute([$slug]);
         $blogpost = $stmt->fetch();
         $cover = Image::find($blogpost["cover_id"]);
         $blogpost["cover_uri"] = $cover["uri"];

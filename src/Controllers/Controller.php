@@ -49,12 +49,12 @@ class Controller {
         $this->render('pages/blogIndex', compact('blogposts', 'pageTitle', 'canonical', 'description', 'css'));
     }
 
-    public function blogShow($id) {
-        $blogpost = Blogpost::find($id);
+    public function blogShow($slug) {
+        $blogpost = Blogpost::find($slug);
         $pageTitle = 'Blog - Quint Felicity';
         $description = '';
         $css = array('blogpost');
-        $canonical = 'https://quint-felicity.de/blog/'.$id;
+        $canonical = 'https://quint-felicity.de/blog/'.$slug;
         $this->render('pages/blogShow', compact('blogpost', 'pageTitle', 'canonical', 'description', 'css'));
     }
 

@@ -17,7 +17,7 @@ $router->get('/', [Controller::class, 'index']);
 $router->get('/impressum', [Controller::class, 'impressum']);
 $router->get('/ueber-uns', [Controller::class, 'ueberUns']);
 $router->get('/blog', [Controller::class, 'blogIndex']);
-$router->get('/blog/{id}', [Controller::class, 'blogShow']);
+$router->get('/blog/{slug}', [Controller::class, 'blogShow']);
 $router->get('/fuer-veranstalter', [Controller::class, 'veranstalter']);
 $router->get('/kontakt', [Controller::class, 'kontakt']);
 

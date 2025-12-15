@@ -10,7 +10,7 @@ require __DIR__ . "/../layout/back.php";?>
             <h2># <?= htmlspecialchars($post['title']) ?></h2>
             <date>- <?= date('Y-m-d', strtotime($post['date'])) ?> -</date>
             <p><?= substr(htmlspecialchars($post['content'] ?? ''), 0, 256) ?></p>
-            <a href="/blog/<?= $post['id']?>" class="button reverseCol">Mehr lesen</a>
+            <a href="/blog/<?= $post['slug']?>" class="button reverseCol">Mehr lesen</a>
         </div>
     </article>
     <?php endforeach; ?>

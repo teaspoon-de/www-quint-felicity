@@ -4,6 +4,8 @@
     padding-top: 0;
     padding-bottom: 50px;
     margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
 }
 #impressum article {
     padding: 40px;
@@ -11,7 +13,6 @@
     flex-direction: column;
     gap: 0px;
     max-width: 1000px;
-    justify-self: center;
 }
 #impressum h1 {
     font-size: 35px;

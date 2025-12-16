@@ -9,6 +9,7 @@
 	<?php foreach($css as $cs):?>
     <link rel="stylesheet" href="/css/<?=$cs?>.css">
 	<?php endforeach;?>
+    <script src="/js/jquery-3.6.1.min.js"></script>
     <script src="/js/script.js"></script>
 
 	<link rel="canonical" href="<?= $canonical?>">
@@ -31,7 +32,6 @@
 	<meta name="twitter:site" content="@quint.felicity">
 
     <meta name="viewport" content="width=device-width initial-scale=0.55">
-    <script src="/js/jquery-3.6.1.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Special+Elite">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>

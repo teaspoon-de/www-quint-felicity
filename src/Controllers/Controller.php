@@ -36,6 +36,7 @@ class Controller {
     public function ueberUns() {
         $pageTitle = 'Über Uns - Quint Felicity';
         $description = '';
+        $css = array();
         $canonical = 'https://quint-felicity.de/ueber-uns';
         $this->render('pages/inWork', compact('pageTitle', 'canonical', 'description', 'css'));
     }
@@ -61,6 +62,7 @@ class Controller {
     public function veranstalter() {
         $pageTitle = 'Für Veranstalter - Quint Felicity';
         $description = '';
+        $css = array();
         $canonical = 'https://quint-felicity.de/fuer-veranstalter';
         $this->render('pages/inWork', compact('pageTitle', 'canonical', 'description', 'css'));
     }

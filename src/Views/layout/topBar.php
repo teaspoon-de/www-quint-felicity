@@ -27,15 +27,13 @@
     $('nav').off().click(()=>{toggleMenu();});
 
     function toggleMenu() {
-        console.log("HI");
-        
         menuActive = !menuActive;
         $(".menuIcon").each(function() {
             if ($(this).hasClass("null"))
                 $(this).removeClass("null");
             else $(this).addClass("null");
         });
-        if (menuActive) $("#menu").css("display", "flex");
-        else $("#menu").css("display", "none");
+        if (menuActive) $("nav").css("display", "flex");
+        else $("nav").css("display", "none");
     }
 </script>

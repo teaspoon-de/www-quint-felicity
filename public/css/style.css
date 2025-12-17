@@ -73,6 +73,12 @@ button, .button {
     gap: 10px;
     align-items: center;
     cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 button svg, .button svg {
     height: 29px;

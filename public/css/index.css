@@ -17,6 +17,7 @@
     padding-bottom: 50px;
     text-align: center;
     font-size: 60px;
+    font-weight: 500;
     font-family: var(--fontHead);
 }
 #intro div {

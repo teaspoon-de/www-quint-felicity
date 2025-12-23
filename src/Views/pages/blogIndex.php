@@ -9,7 +9,7 @@ require __DIR__ . "/../layout/back.php";?>
         <div>
             <h2># <?= htmlspecialchars($post['title']) ?></h2>
             <date>- <?= date('Y-m-d', strtotime($post['date'])) ?> -</date>
-            <p><?= substr(htmlspecialchars($post['content'] ?? ''), 0, 256) ?></p>
+            <p><?= substr(htmlspecialchars(substr(explode('</p>', $post['content'])[0], strlen('<article><p>')) ?? ''), 0, 256) ?></p>
             <a href="/blog/<?= $post['slug']?>" class="button reverseCol">Mehr lesen</a>
         </div>
     </article>

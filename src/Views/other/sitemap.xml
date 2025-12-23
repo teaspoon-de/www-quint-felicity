@@ -1,58 +1,58 @@
 <?php
 header('Content-Type: application/xml; charset=utf-8');
-echo '<?xml version="1.0" encoding="UTF-8"?>'
+echo '<?xml version="1.0" encoding="UTF-8"?>';
 ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url>
-    <loc>https://quint-felicity.de</loc>
-    <lastmod>2025-12-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+    <url>
+        <loc>https://quint-felicity.de/</loc>
+        <lastmod>2025-12-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
 
-  <url>
-    <loc>https://quint-felicity.de/ueber-uns</loc>
-    <lastmod>2025-12-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
+    <url>
+        <loc>https://quint-felicity.de/ueber-uns</loc>
+        <lastmod>2025-12-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <url>
-    <loc>https://quint-felicity.de/blog</loc>
-    <lastmod>2025-12-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+    <url>
+        <loc>https://quint-felicity.de/blog</loc>
+        <lastmod>2025-12-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <?php foreach ($blogposts as $post): ?>
-  <url>
-    <loc>https://quint-felicity.de/blog/<?= $post['slug'] ?></loc>
-    <lastmod><?= date('Y-m-d', strtotime($post['last_edit'])) ?></lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <?php endforeach; ?>
+    <?php foreach ($blogposts as $post): ?>
+    <url>
+        <loc>https://quint-felicity.de/blog/<?= $post['slug'] ?></loc>
+        <lastmod><?= date('Y-m-d', strtotime($post['last_edit'])) ?></lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    <?php endforeach; ?>
 
-  <url>
-    <loc>https://quint-felicity.de/fuer-veranstalter</loc>
-    <lastmod>2025-12-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
+    <url>
+        <loc>https://quint-felicity.de/fuer-veranstalter</loc>
+        <lastmod>2025-12-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
 
-  <url>
-    <loc>https://quint-felicity.de/kontakt</loc>
-    <lastmod>2025-12-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
-  </url>
+    <url>
+        <loc>https://quint-felicity.de/kontakt</loc>
+        <lastmod>2025-12-15</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.2</priority>
+    </url>
 
-  <url>
-    <loc>https://quint-felicity.de/impressum</loc>
-    <lastmod>2025-11-14</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.1</priority>
-  </url>
+    <url>
+        <loc>https://quint-felicity.de/impressum</loc>
+        <lastmod>2025-11-14</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.1</priority>
+    </url>
 
 </urlset>

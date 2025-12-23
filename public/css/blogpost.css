@@ -55,8 +55,13 @@
     object-fit: cover;
     box-shadow: 5px 5px 0px var(--bg);
 }
-.blogpost .content p {
-    padding: 40px;
+.blogpost .content article {
+    padding: 20px 40px 0;
     color: var(--bg);
     font-size: 25px;
+}
+.blogpost .content h2 {
+    color: var(--bg);
+    font-size: 32px;
+    padding: 40px 40px 0;
 }

@@ -10,6 +10,6 @@
     </div>
     <div class="content">
         <img src="<?= "/resources/uploads/".htmlspecialchars($blogpost['cover_uri'] ?? '') ?>">
-        <p><?= $blogpost['content'] ?></p>
+        <?= $blogpost['content'] ?>
     </div>
 </article>

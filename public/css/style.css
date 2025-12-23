@@ -88,9 +88,14 @@ button svg, .button svg {
 p {
     font-size: 23px;
 }
-a {
-    color: var(--text);
+a,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+    color: inherit;
     text-decoration: none;
+    text-decoration-color: currentColor;
 }
 
 
@@ -149,6 +154,9 @@ a {
     white-space: nowrap;
     overflow-x: hidden;
 }
+.artShort article div a > .title:hover {
+    text-decoration: underline;
+}
 .artShort article div date {
     font-size: 20px;
     font-weight: 400;
@@ -199,6 +207,9 @@ a {
 }
 #back svg {
     margin-left: 40px;
+}
+#back:hover {
+    text-decoration: underline;
 }
 
 .inWork {

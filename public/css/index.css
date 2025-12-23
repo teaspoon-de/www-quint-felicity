@@ -11,7 +11,6 @@
     width: 100%;
 }
 #intro .slogan {
-    z-index: 496;
     padding: 80px;
     padding-top: 100px;
     padding-bottom: 50px;
@@ -21,7 +20,6 @@
     font-family: var(--fontHead);
 }
 #intro div {
-    z-index: 496;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,24 +34,31 @@
 #heroM {
     display: block;
 }
-#hero {
+/*#hero {
     display: none;
-}
+}*/
 
 @media only screen and (min-width: 1300px) {
     #heroM {
-        display: none;
+        /*display: none;*/
+        aspect-ratio: 50 / 17;
+        object-fit: cover;
+        object-position: center 42%;
     }
-    #hero {
+    /*#hero {
         display: block;
-    }
+    }*/
     #intro {
         padding-bottom: 0px;
     }
     #intro .slogan {
+        z-index: 496;
         background-color: var(--invis);
         margin-top: -240px;
         padding-bottom: 0px;
+    }
+    #intro div {
+        z-index: 496;
     }
 
     

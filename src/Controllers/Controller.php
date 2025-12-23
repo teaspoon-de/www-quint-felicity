@@ -21,7 +21,7 @@ class Controller {
         $pageTitle = 'Quint Felicity - Band';
         $description = 'Quint Felicity ist eine junge Band aus Rheinland-Pfalz mit modernen Coversongs und guter Stimmung! Entdecke unsere Musik und aktuellen Auftritte.';
         $css = array('index');
-        $canonical = 'https://quint-felicity.de';
+        $canonical = 'https://quint-felicity.de/';
         $this->render('pages/index', compact('blogposts', 'pageTitle', 'canonical', 'description', 'css'));
     }
 

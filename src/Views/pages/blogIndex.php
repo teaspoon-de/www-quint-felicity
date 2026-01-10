@@ -11,9 +11,9 @@ require __DIR__ . "/../layout/back.php";?>
             loading="lazy"
         >
         <div>
-            <a href="/blog/<?=$post['slug']?>"><h2># <?= htmlspecialchars($post['title']) ?></h2></a>
+            <a href="/blog/<?=$post['slug']?>"><h2 class="title"># <?=htmlspecialchars($post['title']) ?></h2></a>
             <date>- <?= date('Y-m-d', strtotime($post['date'])) ?> -</date>
-            <p><?= substr(htmlspecialchars(substr(explode('</p>', $post['content'])[0], strlen('<article><p>')) ?? ''), 0, 256) ?></p>
+            <p><?= substr(htmlspecialchars(substr(explode('</p>', $post['content'])[0], strlen('<article><p>')) ?? ''), 0, 512) ?></p>
             <a href="/blog/<?= $post['slug']?>" class="button reverseCol">Mehr lesen</a>
         </div>
     </article>

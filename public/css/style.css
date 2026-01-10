@@ -120,7 +120,6 @@ a:focus {
     justify-content: space-between;
     gap: 40px;
     max-width: 1000px;
-    overflow: hidden;
 }
 .artShort article img {
     float: left;
@@ -136,20 +135,20 @@ a:focus {
 .artShort article div {
     height: 250px;
     flex-grow: 1;
-    max-width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
     justify-content: center;
+    overflow: hidden;
 }
 .artShort article div .title {
-    margin-top: -4px;
-    padding-top: 4px;
+    margin-top: -10px;
+    padding-top: 10px;
     font-size: 30px;
     flex-basis: 30px;
     height: 34px;
     min-height: 34px;
-    max-width: calc(100vw - 370px)!important;
+    /*max-width: calc(100vw - 370px)!important;*/
     font-family: var(--fontHead);
     text-overflow: ellipsis;
     white-space: nowrap;

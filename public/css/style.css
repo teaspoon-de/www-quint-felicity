@@ -120,6 +120,7 @@ a:focus {
     justify-content: space-between;
     gap: 40px;
     max-width: 1000px;
+    overflow: hidden;
 }
 .artShort article img {
     float: left;

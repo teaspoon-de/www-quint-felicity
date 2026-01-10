@@ -5,7 +5,11 @@ require __DIR__ . "/../layout/back.php";?>
     <h1 class="secTitle">BLOG - AKTUELLES</h1>
     <?php foreach($blogposts as $post): ?>
     <article>
-        <img src="<?= "/resources/uploads/".htmlspecialchars($post['cover_uri'] ?? '') ?>">
+        <img
+            src="<?= "/resources/uploads/".htmlspecialchars($post['cover_uri'] ?? '') ?>"
+            alt="<?= htmlspecialchars($post['cover_alt'] ?? '') ?>"
+            loading="lazy"
+        >
         <div>
             <a href="/blog/<?=$post['slug']?>"><h2># <?= htmlspecialchars($post['title']) ?></h2></a>
             <date>- <?= date('Y-m-d', strtotime($post['date'])) ?> -</date>

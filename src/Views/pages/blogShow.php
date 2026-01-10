@@ -1,3 +1,5 @@
+<link rel="preload" fetchpriority="high" as="image" href="<?= "/resources/uploads/".htmlspecialchars($blogpost['cover_uri'] ?? '') ?>" type="image/jpg">
+
 <article class="blogpost">
     <?php 
     $backTo = 'Zurück zu allen Beiträgen';
@@ -9,7 +11,10 @@
         </div>
     </div>
     <div class="content">
-        <img src="<?= "/resources/uploads/".htmlspecialchars($blogpost['cover_uri'] ?? '') ?>">
+        <img
+            src="<?= "/resources/uploads/".htmlspecialchars($blogpost['cover_uri'] ?? '') ?>"
+            alt="<?= htmlspecialchars($blogpost['cover_alt'] ?? '') ?>"
+        >
         <?= $blogpost['content'] ?>
     </div>
 </article>

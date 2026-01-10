@@ -2,7 +2,7 @@
 	<meta charset="UTF-8" />
 	<title><?= $pageTitle?></title>
 
-    <link rel="icon" type="" href="/resources/LogoRotICO.png">
+    <link rel="icon" type="" href="https://quint-felicity.de/resources/LogoRotICO.png">
 	<link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/topbar.css">

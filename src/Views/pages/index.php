@@ -20,10 +20,14 @@ function getArticleCol(int $count):string {
     <article>
         <div>
             <a href="/ueber-uns"><h2 class="title"># ÜBER UNS</h2></a>
-            <p>Wir sind eine junge Band aus Rheinland-Pfalz mit modernen Coversongs und guter Stimmung!</p>
+            <p>Wir sind eine junge Cover-Band zwischen Bonn und Koblenz. Egal ob moderner oder klassischer Pop-Rock - Lasst euch von unserer Energie überzeugen!</p>
             <a href="/ueber-uns" class="button <?= getArticleCol($count)?>">Mehr lesen</a>
         </div>
-        <img src="/resources/manux.jpg" alt="Schlagzeuger von Quint Felicity während eines Songs">
+        <img
+            src="/resources/manux.jpg"
+            alt="Schlagzeuger von Quint Felicity während eines Songs"
+            loading="lazy"
+        >
     </article>
 </section>
 <?php $count++;?>
@@ -38,7 +42,11 @@ function getArticleCol(int $count):string {
     ';?>
     <?php foreach($blogposts as $post): ?>
     <article>
-        <img src="<?= "/resources/uploads/".htmlspecialchars($post['cover_uri'] ?? '') ?>">
+        <img
+            src="<?= "/resources/uploads/".htmlspecialchars($post['cover_uri'] ?? '') ?>"
+            alt="<?= htmlspecialchars($post['cover_alt'] ?? '') ?>"
+            loading="lazy"
+        >
         <div>
             <a href="/blog/<?= $post['slug']?>"><h3 class="title"># <?= htmlspecialchars($post['title']) ?></h3></a>
             <date>- <?= date('Y-m-d', strtotime($post['date'])) ?> -</date>

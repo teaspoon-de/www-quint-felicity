@@ -11,6 +11,7 @@ class Blogpost {
         for ($i = 0; $i < count($posts); $i++) {
             $cover = Image::find($posts[$i]["cover_id"]);
             $posts[$i]["cover_uri"] = $cover["uri"];
+            $posts[$i]["cover_alt"] = $cover["alt"];
         }
         return $posts;
     }

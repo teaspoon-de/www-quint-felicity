@@ -1,0 +1,91 @@
+.abstand {display: none;}
+#hero {
+    flex-direction: column;
+    background-color: var(--text);
+    color: var(--bg);
+    padding: 0px;
+}
+#hero img {
+    z-index: 495;
+    width: 100%;
+    display: block;
+    aspect-ratio: 50 / 35;
+    object-fit: cover;
+    object-position: center 0;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px 40px;
+    align-items: center;
+}
+.section article {
+    max-width: 1000px;
+}
+.secTitle {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    font-family: var(--fontHead);
+    color: var(--bg);
+    font-size: 60px;
+}
+.title {
+    padding: 20px 0 0;
+    font-size: 30px;
+    font-family: var(--fontHead);
+    color: var(--bg);
+}
+.text {
+    padding: 20px 0 0;
+    color: var(--bg);
+}
+
+#members article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#members article .grid {
+    margin-top: 40px;
+    align-self: center;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 40px;
+    max-width: 1000px;
+}
+#members article .grid div {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border: solid 2px var(--bg);
+    max-width: 500px;
+    align-items: center;
+}
+#members article .grid div img {
+    width: 100%;
+}
+#members article .grid div .title {
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 0;
+    align-self: center;
+}
+#members article .grid div .label {
+    padding: 0;
+    color: var(--bg);
+}
+
+
+@media only screen and (min-width: 1300px) {
+    #hero img {
+        aspect-ratio: 50 / 20;
+        object-fit: cover;
+        object-position: center 5%;
+    }
+
+    #members article .grid {
+        grid-template-columns: auto auto;
+    }
+}

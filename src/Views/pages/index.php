@@ -18,8 +18,8 @@ function getArticleCol(int $count):string {
 
 <section id="ueberUns" class="artShort <?= getArticleCol($count)?>">
     <article>
-        <div>
-            <a href="/ueber-uns"><h2 class="title"># ÜBER UNS</h2></a>
+        <div style="height: fit-content;">
+            <a href="/ueber-uns"><h2 class="title" style="padding-top: 10px;"># ÜBER UNS</h2></a>
             <p>Wir sind eine junge Cover-Band zwischen Bonn und Koblenz. Egal ob moderner oder klassischer Pop-Rock - Lasst euch von unserer Energie überzeugen!</p>
             <a href="/ueber-uns" class="button <?= getArticleCol($count)?>">Mehr lesen</a>
         </div>
@@ -27,6 +27,7 @@ function getArticleCol(int $count):string {
             src="/resources/manux.jpg"
             alt="Schlagzeuger von Quint Felicity während eines Songs"
             loading="lazy"
+            style="height: 250px; width: 250px; align-self: center;"
         >
     </article>
 </section>

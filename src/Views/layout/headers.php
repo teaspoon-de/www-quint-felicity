@@ -21,9 +21,9 @@
 	<meta name="description" content="<?= $description ?: ''?>">
 
 	<!-- Open Graph Meta Tags -->
-	<meta property="og:title" content="Quint Felicity – Pop & Rock Band">
-	<meta property="og:description" content="Quint Felicity ist eine junge Band aus Rheinland-Pfalz mit modernen Coversongs und guter Stimmung! Entdecke unsere Musik und aktuellen Auftritte.">
-	<meta property="og:image" content="https://quint-felicity.de/resources/heroMobile2.jpg">
+	<meta property="og:title" content="<?= $pageTitle?>">
+	<meta property="og:description" content="<?= $description ?: ''?>">
+	<meta property="og:image" content="https://quint-felicity.de/resources/halbkreis.jpg">
 	<meta property="og:image:alt" content="Bandfoto von Quint Felicity">
 	<meta property="og:url" content="https://quint-felicity.de/">
 	<meta property="og:type" content="music.group">

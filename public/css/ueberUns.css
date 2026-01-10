@@ -64,7 +64,10 @@
     align-items: center;
 }
 #members article .grid div img {
+    aspect-ratio: 2643 / 3304;
+    object-fit: cover;
     width: 100%;
+    height: auto;
 }
 #members article .grid div .title {
     font-size: 40px;

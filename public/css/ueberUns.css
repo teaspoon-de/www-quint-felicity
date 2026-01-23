@@ -80,6 +80,23 @@
     color: var(--bg);
 }
 
+#hoerProbe {
+    display: flex;
+    flex-direction: column;
+    color: var(--bg);
+}
+#hoerProbe .album .trackList {
+    display: flex;
+    flex-direction: column;
+}
+#hoerProbe .album .trackList .song {
+    display: flex;
+}
+#hoerProbe .album .trackList img {
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+}
 
 @media only screen and (min-width: 1300px) {
     #hero img {

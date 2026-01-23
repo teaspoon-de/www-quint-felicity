@@ -12,6 +12,30 @@
     </article>
 </section>
 
+<section id="hoerProbe" class="section">
+    <h2 class="title"># HÖRPROBE</h2>
+    <div class="album">
+        <div class="info">
+        </div>
+        <div class="trackList">
+            <div class="song">
+                <img src="/resources/manux.jpg" alt="">
+                <div>
+                    <h4>Showbusiness 25</h4>
+                    <p>Quint Felicity</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="hp01" src="/resources/Dani California.mp3"></audio>
+    <div> 
+        <button onclick="document.getElementById('player').play()">Play</button> 
+        <button onclick="document.getElementById('player').pause()">Pause</button> 
+        <button onclick="document.getElementById('player').volume += 0.1">Vol +</button> 
+        <button onclick="document.getElementById('player').volume -= 0.1">Vol -</button> 
+    </div>
+</section>
+
 <section id="members" class="section">
     <article>
         <h2 class="title"># DIE MITGLIEDER</h2>

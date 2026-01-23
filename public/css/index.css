@@ -31,6 +31,22 @@
     margin-bottom: 6px;
 }
 
+article.eventInfo {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+article.eventInfo svg {
+    height: 40px;
+    width: 40px;
+}
+article.eventInfo p {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 30px;
+}
+
 #heroM {
     display: block;
 }

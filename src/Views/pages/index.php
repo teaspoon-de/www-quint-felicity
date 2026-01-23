@@ -18,16 +18,39 @@ function getArticleCol(int $count):string {
 
 <section id="ueberUns" class="artShort <?= getArticleCol($count)?>">
     <article>
-        <div style="height: fit-content;">
-            <a href="/ueber-uns"><h2 class="title" style="padding-top: 10px;"># ÜBER UNS</h2></a>
-            <p>Wir sind eine junge Cover-Band zwischen Bonn und Koblenz. Egal ob moderner oder klassischer Pop-Rock - Lasst euch von unserer Energie überzeugen!</p>
-            <a href="/ueber-uns" class="button <?= getArticleCol($count)?>">Mehr lesen</a>
-        </div>
         <img
             src="/resources/manux.jpg"
             alt="Schlagzeuger von Quint Felicity während eines Songs"
             loading="lazy"
             style="height: 250px; width: 250px; align-self: center;"
+        >
+        <div style="height: fit-content;">
+            <a href="/ueber-uns"><h2 class="title" style="padding-top: 10px;"># ÜBER UNS</h2></a>
+            <p>Wir sind eine junge Cover-Band zwischen Bonn und Koblenz. Egal ob moderner oder klassischer Pop-Rock - Lasst euch von unserer Energie überzeugen!</p>
+            <a href="/ueber-uns" class="button <?= getArticleCol($count)?>">Mehr lesen</a>
+        </div>
+    </article>
+</section>
+<?php $count++;?>
+
+<section id="eventBanner" class="artShort <?= getArticleCol($count)?>">
+    <h2 class="secTitle unselectable">NÄCHSTES EVENT</h2>
+    <article class="eventInfo">
+        <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar1-icon lucide-calendar-1"><path d="M11 14h1v4"/><path d="M16 2v4"/><path d="M3 10h18"/><path d="M8 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/></svg>
+            Donnerstag, 05. Februar 19:30
+        </p>
+        <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+            Grube Ferdinand
+        </p>
+    </article>
+    <article style="align-items: center; justify-content: center;">
+        <img
+            src="/resources/Grube Ferdinand.jpg"
+            alt="Poster: Quint Felicity Konzert in der Grube Ferdinand am 05.02.2026"
+            loading="lazy"
+            style="width: 80%; max-width: 700px; aspect-ratio: 864 / 1222;"
         >
     </article>
 </section>

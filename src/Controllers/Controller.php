@@ -18,11 +18,12 @@ class Controller {
 
     public function index() {
         $blogposts = Blogpost::allLimit(5);
+        $event = Event::nextPublic();
         $pageTitle = 'Quint Felicity - Band';
         $description = 'Wir sind eine junge Cover-Band zwischen Bonn und Koblenz. Egal ob moderner oder klassischer Pop-Rock - Lasst euch von unserer Energie überzeugen!';
         $css = array('index');
         $canonical = 'https://quint-felicity.de/';
-        $this->render('pages/index', compact('blogposts', 'pageTitle', 'canonical', 'description', 'css'));
+        $this->render('pages/index', compact('blogposts', 'event', 'pageTitle', 'canonical', 'description', 'css'));
     }
 
     public function impressum() {
@@ -57,6 +58,15 @@ class Controller {
         $css = array('blogpost');
         $canonical = 'https://quint-felicity.de/blog/'.$slug;
         $this->render('pages/blogShow', compact('blogpost', 'pageTitle', 'canonical', 'description', 'css'));
+    }
+
+    public function events() {
+        $events = Event::all();
+        $pageTitle = 'Events - Quint Felicity';
+        $description = 'Die nächsten Auftritte von Quint Felicity';
+        $css = array('events');
+        $canonical = 'https://quint-felicity.de/events';
+        $this->render('pages/events', compact('events', 'pageTitle', 'canonical', 'description', 'css'));
     }
 
     public function veranstalter() {

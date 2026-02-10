@@ -11,6 +11,7 @@
     <div class="list">
         <p><a href="/">START</a></p>
         <p><a href="/ueber-uns">ÜBER UNS</a></p>
+        <p><a href="/events">EVENTS</a></p>
         <p><a href="/blog">BLOG</a></p>
         <p><a href="/fuer-veranstalter">FÜR VERANSTALTER</a></p>
         <p><a href="/kontakt">KONTAKT</a></p>

@@ -1,0 +1,40 @@
+#events {padding-top: 40px}
+#events article {
+    justify-content: left;
+    align-items: center;
+    gap: 30px;
+}
+#events article .date {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--bg);
+    box-shadow: 5px 5px 0px var(--bg);
+    height: 90px;
+    width: 90px;
+    flex-basis: 90px;
+    flex-grow: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+}
+#events article .date p {
+    overflow: visible;
+    text-align: center;
+}
+#events article .date .day {
+    padding-top: 10px;
+    font-size: 45px;
+    font-weight: 600;
+    font-family: var(--fontHead);
+}
+#events article .date .month {
+    font-size: 28px;
+    font-family: var(--fontHead);
+}
+#events article .title {
+    flex-grow: 1;
+    font-size: 30px;
+    font-weight: 600;
+}

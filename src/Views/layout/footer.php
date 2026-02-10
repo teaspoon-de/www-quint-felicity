@@ -4,6 +4,7 @@
             Menu:
             <a href="/">Start</a>| 
             <a href="/ueber-uns">Über uns</a>|
+            <a href="/events">Events</a>|
             <a href="/blog">Blog</a>|
             <a href="/fuer-veranstalter">Für Veranstalter</a>
         </p>

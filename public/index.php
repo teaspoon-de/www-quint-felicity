@@ -8,6 +8,7 @@ require_once __DIR__ . '/../src/Router.php';
 
 require_once __DIR__ . '/../src/Controllers/Controller.php';
 require_once __DIR__ . '/../src/Models/Blogpost.php';
+require_once __DIR__ . '/../src/Models/Event.php';
 require_once __DIR__ . '/../src/Models/Image.php';
 
 $router = new Router();
@@ -18,6 +19,7 @@ $router->get('/impressum', [Controller::class, 'impressum']);
 $router->get('/ueber-uns', [Controller::class, 'ueberUns']);
 $router->get('/blog', [Controller::class, 'blogIndex']);
 $router->get('/blog/{slug}', [Controller::class, 'blogShow']);
+$router->get('/events', [Controller::class, 'events']);
 $router->get('/fuer-veranstalter', [Controller::class, 'veranstalter']);
 $router->get('/kontakt', [Controller::class, 'kontakt']);
 

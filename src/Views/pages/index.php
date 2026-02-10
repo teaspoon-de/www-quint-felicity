@@ -33,28 +33,55 @@ function getArticleCol(int $count):string {
 </section>
 <?php $count++;?>
 
-<section id="eventBanner" class="artShort <?= getArticleCol($count)?>">
+<?php
+if ($event) {
+    echo '<section id="eventBanner" class="artShort ';
+    echo getArticleCol($count);
+    echo '">
     <h2 class="secTitle unselectable">NÄCHSTES EVENT</h2>
+    <a href="/events" class="button '.getArticleCol($count).'" style="margin-top: -20px;">
+        Alle kommenden Events anzeigen
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+    </a>
     <article class="eventInfo">
         <p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar1-icon lucide-calendar-1"><path d="M11 14h1v4"/><path d="M16 2v4"/><path d="M3 10h18"/><path d="M8 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/></svg>
-            Donnerstag, 05. Februar 19:30
-        </p>
-        <p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-            Grube Ferdinand
-        </p>
-    </article>
-    <article style="align-items: center; justify-content: center;">
-        <img
-            src="/resources/Grube Ferdinand.jpg"
-            alt="Poster: Quint Felicity Konzert in der Grube Ferdinand am 05.02.2026"
-            loading="lazy"
-            style="width: 80%; max-width: 700px; aspect-ratio: 864 / 1222;"
-        >
-    </article>
-</section>
-<?php $count++;?>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>';
+    echo htmlspecialchars($event['title']);
+    echo '</p><p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar1-icon lucide-calendar-1"><path d="M11 14h1v4"/><path d="M16 2v4"/><path d="M3 10h18"/><path d="M8 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/></svg>';
+    $date = new DateTime($event['date_begin']);
+    $months = [
+        1 => "Januar",
+        2 => "Februar",
+        3 => "März",
+        4 => "April",
+        5 => "Mai",
+        6 => "Juni",
+        7 => "Juli",
+        8 => "August",
+        9 => "September",
+        10 => "Oktober",
+        11 => "November",
+        12 => "Dezember"
+    ];
+    $day = $date->format('j');
+    $month = $months[(int)$date->format('n')];
+    $year = $date->format('Y');
+    echo "$day. $month $year";
+    echo '</p>
+        </article>
+        <!--article style="align-items: center; justify-content: center;">
+            <img
+                src="/resources/Grube Ferdinand.jpg"
+                alt="Poster: Quint Felicity Konzert in der Grube Ferdinand am 05.02.2026"
+                loading="lazy"
+                style="width: 80%; max-width: 700px; aspect-ratio: 864 / 1222;"
+            >
+        </article-->
+    </section>';
+    $count++;
+}
+?>
 
 <?php if (count($blogposts) > 0) echo '
 <section id="aktuelles" class="artShort '.getArticleCol($count).'">

@@ -6,7 +6,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 
     <url>
         <loc>https://quint-felicity.de/</loc>
-        <lastmod>2025-12-23</lastmod>
+        <lastmod>2026-02-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -15,6 +15,13 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
         <loc>https://quint-felicity.de/ueber-uns</loc>
         <lastmod>2025-12-15</lastmod>
         <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://quint-felicity.de/events</loc>
+        <lastmod>2026-02-10</lastmod>
+        <changefreq>weakly</changefreq>
         <priority>0.8</priority>
     </url>
 

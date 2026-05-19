@@ -72,9 +72,9 @@ class Controller {
     public function veranstalter() {
         $pageTitle = 'Für Veranstalter - Quint Felicity';
         $description = 'Alle nötigen technischen und organisatorischen Infos gesammelt';
-        $css = array();
+        $css = array('text', 'veranstalter');
         $canonical = 'https://quint-felicity.de/fuer-veranstalter';
-        $this->render('pages/inWork', compact('pageTitle', 'canonical', 'description', 'css'));
+        $this->render('pages/veranstalter', compact('pageTitle', 'canonical', 'description', 'css'));
     }
 
     public function kontakt() {

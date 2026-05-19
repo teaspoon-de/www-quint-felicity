@@ -8,9 +8,9 @@
     z-index: 495;
     width: 100%;
     display: block;
-    aspect-ratio: 50 / 35;
+    aspect-ratio: 50 / 30;
     object-fit: cover;
-    object-position: center 0;
+    object-position: 32% 0;
 }
 
 #members article {
@@ -54,9 +54,9 @@
 
 @media only screen and (min-width: 1300px) {
     #hero img {
-        aspect-ratio: 50 / 20;
+        aspect-ratio: 645 / 190;
         object-fit: cover;
-        object-position: center 5%;
+        object-position: center 0;
     }
 
     #members article .grid {

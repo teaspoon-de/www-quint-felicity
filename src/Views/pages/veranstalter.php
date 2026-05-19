@@ -12,7 +12,7 @@
         <p class="text">✔ Was brauchen wir für einen Auftritt?<br>✔ Wie funktioniert unser System?</p>
         <div class="box">
             <p class="text"><b>Zum Download:</b></p>
-            <p class="text">✔ Technical Rider (inklusive Stageplot & Patchplan)<br>✔ Logos und Pressefotos in Web- & Druckqualität</p>
+            <p class="text">✔ Logos und Pressefotos in Web- & Druckqualität<br>✔ Technical Rider (inklusive Stageplot & Patchplan)</p>
             <a href="#downloads" class="button reverseCol">Direkt zu den Downloads</a>
         </div>
         <p class="text">Für Werbezwecke bitten wir ausdrücklich, ausschließlich die hier bereitgestellten Logos und Bandfotos zu verwenden.</p>
@@ -31,7 +31,7 @@
     </article>
     <article>
         <h3 class="title"># UNSER TECHNISCHES SETUP</h3>
-        <p class="text">Unser Rack: 16 Inputs, passives Split-System, Monitoring-Mischpult (Midas MR18). 2× 8-Kanal Multicore (1,5m) zum FOH. Mitbringen wir selbst: Mikrofone, DIs, Verkabelung, In-Ear-System</p>
+        <p class="text">Unser Rack: 16 Inputs, passives Split-System, Monitoring-Mischpult (Midas MR18). 2× 8-Kanal Multicore (1,5m) zum FOH. Mikrofone, DIs, Verkabelung, In-Ear-System bringen wir selbst mit.</p>
     </article>
     <h2 id="downloads" class="secTitle">DOWNLOADS</h2>
     <article>

@@ -21,7 +21,7 @@ class Controller {
         $event = Event::nextPublic();
         $pageTitle = 'Quint Felicity - Band';
         $description = 'Wir sind eine junge Cover-Band zwischen Bonn und Koblenz. Egal ob moderner oder klassischer Pop-Rock - Lasst euch von unserer Energie überzeugen!';
-        $css = array('index');
+        $css = array('index', 'buehnenfieber');
         $canonical = 'https://quint-felicity.de/';
         $this->render('pages/index', compact('blogposts', 'event', 'pageTitle', 'canonical', 'description', 'css'));
     }

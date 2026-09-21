@@ -1,0 +1,160 @@
+#buehnenfieber {
+    --bg: var(--schwatz);
+    --bgCon: var(--schwatzCon);
+    --text: var(--white);
+    --textCon: var(--whiteCon);
+    --main: var(--yellow);
+    --con: var(--yellowCon);
+
+    --white: #ffffff;
+    --whiteCon: #8a8b8b;
+    --yellow: #f0b823;
+    --yellowCon: #b29135;
+    --orange: #f38600;
+    --red: #da2c00;
+    --schwatz: #000000;
+    --schwatzCon: #3d3725;
+
+    --fontAnton: "Anton", sans-serif;
+    --fontPoppins: "Poppins", sans-serif;
+    --fontAllura: "Allura", cursive;
+
+    padding: 0 0 100px;
+    color: var(--text);
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (min-width: 1300px) {
+        padding: 100px 0 0;
+    }
+
+    .anton {
+        font-family: var(--fontAnton);
+        font-weight: 400;
+        font-style: normal;
+    }
+    .allura {
+        font-family: var(--fontAllura);
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: min(100% - 4rem, 1000px);
+        padding: 3rem 0;
+        border: 1px none var(--main);
+        border-top-style: solid;
+        border-bottom-style: solid;
+    }
+
+
+    .button {
+        --color: var(--text);
+        --contrast: var(--bg);
+        color: var(--color);
+        align-self: center;
+        width: fit-content;
+        padding: .5rem 1rem;
+        border: solid 1px var(--color);
+        box-shadow: -.2rem .2rem var(--color);
+        font-family: var(--fontAnton);
+        cursor: pointer;
+    }
+    .button:hover {
+        background-color: var(--color);
+        color: var(--contrast);
+        margin-top: .2rem;
+        margin-right: .4rem;
+        margin-bottom: -.2rem;
+        box-shadow: none;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+        h2 {
+            font-size: min(14vw, 5rem);
+            letter-spacing: min(1.5vw, 0.54rem);
+        }
+        .datum {
+            text-align: center;
+            margin-bottom: -.5rem;
+        }
+        .untertitel {
+            margin-top: -1.5rem;
+            display: flex;
+            gap: .5rem;
+            align-items: center;
+            justify-content: center;
+        }
+        .poppins {
+            font-family: var(--fontPoppins);
+            font-size: 1.25rem;
+        }
+        .allura {
+            color: var(--main);
+            font-size: 2.5rem;
+        }
+    }
+
+    .countdown {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: min(5%, 2rem);
+        
+        .digit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
+            width: min(21.25%, 7rem);
+            aspect-ratio: 1/1;
+            border: solid 1px var(--main);
+            box-shadow: -.2rem .2rem var(--main);
+        }
+        span {
+            font-family: var(--fontAnton);
+            font-size: 2rem;
+            line-height: 2rem;
+        }
+        small {
+            font-family: var(--fontPoppins);
+            line-height: .875rem;
+            font-size: .875rem;
+        }
+    }
+
+    .aufruf {
+        width: 14.5rem;
+        display: flex;
+        flex-direction: column;
+        transform: skewX(-10deg) rotate(-10deg);
+        color: var(--bg);
+
+        p {
+            padding: 0 1rem;
+            width: fit-content;
+            font-size: 2rem;
+            background-color: var(--main);
+            margin-bottom: -.5rem;
+        }
+    }
+
+    .aufrufContainer {
+        margin-top: 2rem;
+        width: 31.5rem;
+        display: flex;
+        justify-content: space-between;
+    }
+}

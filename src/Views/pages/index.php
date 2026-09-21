@@ -16,6 +16,91 @@ function getArticleCol(int $count):string {
 }
 ?>
 
+<section id="buehnenfieber">
+    <div class="container">
+        <div class="logo">
+            <p class="poppins datum">SA, 17.10.2026</p>
+            <h2 class="anton">BÜHNENFIEBER</h2>
+            <div class="untertitel">
+                <p class="poppins">DIE LIVE SHOW</p>
+                <p class="allura">in Rahms</p>
+            </div>
+        </div>
+        <div class="countdown">
+            <div class="digit">
+                <span id="days">00</span>
+                <small>TAGE</small>
+            </div>
+            <div class="digit">
+                <span id="hours">00</span>
+                <small>STD</small>
+            </div>
+            <div class="digit">
+                <span id="minutes">00</span>
+                <small>MIN</small>
+            </div>
+            <div class="digit">
+                <span id="seconds">00</span>
+                <small>SEK</small>
+            </div>
+        </div>
+        <div class="aufrufContainer">
+            <div class="aufruf anton">
+                <p>JETZT TICKET</p>
+                <p style="align-self: flex-end;">SICHERN!</p>
+            </div>
+            <a class="button" href="https://buehnenfieber.quint-felicity.de/">
+                <p>Zur Website</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </a>
+            
+        </div>
+    </div>
+
+    <script>
+        const targetDate = new Date("2026-10-17T19:00:00");
+
+        function updateCountdown() {
+            const now = new Date();
+            const difference = targetDate - now;
+
+            if (difference <= 0) {
+                document.getElementById("days").textContent = "00";
+                document.getElementById("hours").textContent = "00";
+                document.getElementById("minutes").textContent = "00";
+                document.getElementById("seconds").textContent = "00";
+                return;
+            }
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor(
+                (difference / (1000 * 60 * 60)) % 24
+            );
+            const minutes = Math.floor(
+                (difference / (1000 * 60)) % 60
+            );
+            const seconds = Math.floor(
+                (difference / 1000) % 60
+            );
+
+            document.getElementById("days").textContent =
+                String(days).padStart(2, "0");
+
+            document.getElementById("hours").textContent =
+                String(hours).padStart(2, "0");
+
+            document.getElementById("minutes").textContent =
+                String(minutes).padStart(2, "0");
+
+            document.getElementById("seconds").textContent =
+                String(seconds).padStart(2, "0");
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+</section>
+
 <section id="ueberUns" class="artShort <?= getArticleCol($count)?>">
     <article>
         <img

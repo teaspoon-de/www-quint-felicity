@@ -1,0 +1,1 @@
+sudo docker compose down && echo "--- MYSQL BEING EXTRA ---" && sudo docker stop mysql && echo "--- MYSQL STILL RUNNIG? ---" && sudo docker ps && echo "--- MYSQL WILL SICH NICHT LOESCHEN ---" && sudo docker ps -f "status=exited" && echo "--- MYSQL LOESCHEN ---" && sudo docker container rm mysql && echo "--- JETZT HOFFENTLICH WEG ---" && sudo docker ps -f "status=exited"

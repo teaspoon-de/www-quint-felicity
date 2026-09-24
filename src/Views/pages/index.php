@@ -2,10 +2,10 @@
 
 <section id="intro">
     <img id="heroM" src="/resources/heroMobile2.jpg" alt="Hero-Bild Quint Felicity, alle Mitglieder auf der Bühne">
-    <h1 class="slogan unselectable">5 JUNGS - 1 VIBE</h1>
+    <p class="slogan unselectable">5 JUNGS - 1 VIBE</p>
     <div>
         <p>Interesse?</p>
-        <a href="/kontakt" class="button reverseCol">Kontaktier uns!</a>
+        <a href="/kontakt" class="button">Kontaktier uns!</a>
     </div>
 </section>
 <?php

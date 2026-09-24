@@ -1,8 +1,8 @@
 :root {
-    --bg: var(--white);
-    --bgCon: var(--whiteCon);
-    --text: var(--schwatz);
-    --textCon: var(--schwatzCon);
+    --bg: var(--schwatz);
+    --bgCon: var(--schwatzCon);
+    --text: var(--white);
+    --textCon: var(--whiteCon);
     --main: var(--red);
     --contrast: var(--orange);
 
@@ -16,29 +16,37 @@
     --invis: rgba(32, 67, 112, 0);
     --blackShade: rgba(0, 0, 0, 0.818);
 
-    --fontStandart: "PT Sans", sans-serif;
-    --fontHead: "Special Elite", sans-serif;
+    --fontStandart: var(--ptSans);
+    --fontHead: var(--specialElite);
+    --ptSans: "PT Sans", sans-serif;
+    --specialElite: "Special Elite", sans-serif;
 }
 
-html, body {
-    height: 100%;
-    width: 100%;
-    /*background-color: #2f3136;*/
-    /*font-family: trebuchet ms, sans-serif;*/
-    color: var(--text);
-    background-color: var(--text);
-    -webkit-font-smoothing: antialiased;
-    font-family: var(--fontStandart);
-}
-
-* {
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
-.null {
-    display: none;
+html, body {
+    width: 100%;
+    color: var(--text);
+    background-color: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--fontStandart);
+    font-size: 1rem;
+    line-height: 1.5;
 }
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Eigene Klassen */
+.null {display: none;}
 .unselectable {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -47,31 +55,25 @@ html, body {
     -ms-user-select: none;
     user-select: none;
 }
-
-
-
-section {
+.small {font-size: 0.875rem;}
+.container {
+    width: min(100% - 4rem, var(--containerMaxWidth));
+    margin-inline: auto;
     display: flex;
-    z-index: 500;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    flex-direction: column;
 }
-
-button, .button {
+.button {
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-family: var(--fontStandart);
+    font-weight: 800;
     color: var(--text);
     background-color: var(--bg);
-    padding: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    box-shadow: 5px 5px 0px var(--text);
-    font-weight: 800;
-    font-size: 23px;
-    width: fit-content;
-    outline: none;
+    box-shadow: .25rem .25rem 0 var(--text);
     border: 1px solid var(--text);
-    display: flex;
-    gap: 10px;
-    align-items: center;
+    width: fit-content;
     cursor: pointer;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -80,13 +82,19 @@ button, .button {
     -ms-user-select: none;
     user-select: none;
 }
-button svg, .button svg {
-    height: 29px;
-    width: 29px;
-}
 
-p {
-    font-size: 23px;
+/* Elemente */
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 500;
+}
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
 }
 a,
 a:visited,
@@ -97,6 +105,23 @@ a:focus {
     text-decoration: none;
     text-decoration-color: currentColor;
 }
+h1 {
+    font-family: var(--fontHead);
+    font-size: 2rem;
+}
+h2, h3, h4, h5, h6 {
+    font-family: var(--fontHead);
+    font-size: 1.5rem;
+}
+p {font-size: 1rem;}
+img,
+video,
+svg {max-width: 100%;}
+b {font-weight: 800;}
+
+
+
+
 
 
 .artShort {

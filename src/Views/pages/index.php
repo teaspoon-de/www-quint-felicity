@@ -2,7 +2,7 @@
 
 <section id="intro">
     <img id="heroM" src="/resources/heroMobile2.jpg" alt="Hero-Bild Quint Felicity, alle Mitglieder auf der Bühne">
-    <p class="slogan unselectable">5 JUNGS - 1 VIBE</p>
+    <p class="head unselectable">5 JUNGS - 100% LIVE</p>
     <div>
         <p>Interesse?</p>
         <a href="/kontakt" class="button">Kontaktier uns!</a>
@@ -101,20 +101,23 @@ function getArticleCol(int $count):string {
     </script>
 </section>
 
-<section id="ueberUns" class="artShort <?= getArticleCol($count)?>">
-    <article>
-        <img
-            src="/resources/manux.jpg"
-            alt="Schlagzeuger von Quint Felicity während eines Songs"
-            loading="lazy"
-            style="height: 250px; width: 250px; align-self: center;"
-        >
-        <div style="height: fit-content;">
-            <a href="/ueber-uns"><h2 class="title" style="padding-top: 10px;"># ÜBER UNS</h2></a>
-            <p>Wir sind eine junge Cover-Band zwischen Bonn und Koblenz. Egal ob moderner oder klassischer Pop-Rock - Lasst euch von unserer Energie überzeugen!</p>
-            <a href="/ueber-uns" class="button <?= getArticleCol($count)?>">Mehr lesen</a>
+<section id="ueberUns" class="<!--?= getArticleCol($count)?-->">
+    <div class="container">
+        <div class="article-short">
+            <img
+                src="/resources/manux.jpg"
+                alt="Schlagzeuger von Quint Felicity während eines Songs"
+                width="250"
+                height="250"
+                loading="lazy"
+            >
+            <article>
+                <a href="/ueber-uns"><h2 class="head" ># ÜBER UNS</h2></a>
+                <p>Wir sind eine junge Cover-Band zwischen Bonn und Koblenz. Egal ob moderner oder klassischer Pop-Rock - Lasst euch von unserer Energie überzeugen!</p>
+                <a href="/ueber-uns" class="button">Mehr lesen</a>
+            </article>
         </div>
-    </article>
+</div>
 </section>
 <?php $count++;?>
 
@@ -167,6 +170,55 @@ if ($event) {
     $count++;
 }
 ?>
+
+<section id="aktuelles">
+    <div class="container">
+        <a href="/blog"><h2 class="head">AKTUELLES</h2></a>
+        <a href="/blog" class="button">
+            Alle Artikel anzeigen
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </a>
+        <div class="article-short">
+            <img
+                src="https://quint-felicity.de/resources/uploads/img_6a3bd0ae6cdcf9.05851104.jpg"
+                alt=""
+                loading="lazy"
+            >
+            <article>
+                <a href="/blog/heimspiel-und-dorffest-unser-konzertwochenende-in-rahms-und-glockscheidwuescheid"><h3 class="head"># Heimspiel und Dorffest – Konzerte in Rahms und Glockscheid/Wüscheid</h3></a>
+                <p class="date">- 2026-05-02 -</p>
+                <p> Maiwochenende begann für uns mit dem Tanz in den Mai in Rahms. Nachdem wir dort bereits im vergangenen Jahr spielen durften, haben wir uns sehr über die erneute Einladung gefreut.&lt;br&gt;Der Auftritt ist nicht nur für Cedrik und Finn ein Heimspiel, denn im Rahmser Bürgerhaus dürfen wir regelmäßig Probewochenenden veranstalten, ein wichtiges Element unserer Vorbereitung. Deshalb finden wir es wichtig, die Ergebnisse unserer Proben auch in Rahms zu präsentieren.&lt;br&gt;Der Tanz in den Mai wird in</p>
+                <a href="/blog/heimspiel-und-dorffest-unser-konzertwochenende-in-rahms-und-glockscheidwuescheid" class="button">Mehr lesen</a>
+            </article>
+        </div>
+        <div class="article-short">
+            <img
+                src="https://quint-felicity.de/resources/uploads/img_69eb4abb0df664.87481584.jpg"
+                alt=""
+                loading="lazy"
+            >
+            <article>
+                <a href="/blog/100-minuten-24-songs-ein-ziel"><h3 class="head"># 100 Minuten, 24 Songs, ein Ziel</h3></a>
+                <p class="date">- 2026-02-05 -</p>
+                <p>h über vier Monaten intensiver Vorbereitung im Proberaum war es endlich Zeit für unseren ersten eigenen abendfüllenden Gig. Die Grube Ferdinand war für uns der perfekte Ort, um zu zeigen, woran wir in der letzten Zeit gearbeitet haben. Unser Ziel war es, sowohl klanglich als auch technisch einen deutlichen Schritt nach vorne zu machen.&lt;/article&gt;&lt;h2&gt;Von Null auf Hundert&lt;/h2&gt;&lt;article&gt;Den Einstieg haben wir mit „I’m Still Standing“ (Taron Egerton Style) gemacht, ein super Eisb</p>
+                <a href="/blog/100-minuten-24-songs-ein-ziel" class="button">Mehr lesen</a>
+            </article>
+        </div>
+        <div class="article-short">
+            <img
+                src="https://quint-felicity.de/resources/uploads/img_69831233d1e7d0.52446618.jpeg"
+                alt=""
+                loading="lazy"
+            >
+            <article>
+                <a href="/blog/news-wechsel-an-den-sticks-willkommen-kjell"><h3 class="head"># News: Wechsel an den Sticks – Willkommen Kjell!</h3></a>
+                <p class="date">- 2026-02-03 -</p>
+                <p>Bei Quint Felicity gibt es eine personelle Neuigkeit: Unser langjähriger Schlagzeuger Manuel zieht ab Januar für sechs Monate in den Norden, um sich dort seiner beruflichen Tätigkeit zu widmen. Auch wenn er vorerst nicht mehr vollständig dabei sein kann, wünschen wir ihm für dieses halbe Jahr nur das Beste!</p>
+                <a href="/blog/news-wechsel-an-den-sticks-willkommen-kjell" class="button">Mehr lesen</a>
+            </article>
+        </div>
+    </div>
+</section>
 
 <?php if (count($blogposts) > 0) echo '
 <section id="aktuelles" class="artShort '.getArticleCol($count).'">

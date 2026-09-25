@@ -7,7 +7,7 @@
     --contrast: var(--orange);
 
     --white: #e2e5e9;
-    --whiteCon: #8a8b8b;
+    --whiteCon: #adadad;
     --orange: #f38600;;
     --red: #da2c00;
     --schwatz: #000000;
@@ -20,6 +20,8 @@
     --fontHead: var(--specialElite);
     --ptSans: "PT Sans", sans-serif;
     --specialElite: "Special Elite", sans-serif;
+
+    --containerMaxWidth: 1000px;
 }
 
 *,
@@ -57,21 +59,30 @@ select {
 }
 .small {font-size: 0.875rem;}
 .container {
-    width: min(100% - 4rem, var(--containerMaxWidth));
+    width: min(100% - 3rem, var(--containerMaxWidth));
     margin-inline: auto;
     display: flex;
     flex-direction: column;
 }
+.head {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-family: var(--fontHead);
+    font-weight: 400;
+    font-style: normal;
+    align-self: center;
+    text-align: center;
+}
 .button {
-    padding: .5rem 1rem;
+    padding: .125rem .5rem .25rem;
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: .25rem;
     font-family: var(--fontStandart);
-    font-weight: 800;
+    font-weight: bolder;
     color: var(--text);
     background-color: var(--bg);
-    box-shadow: .25rem .25rem 0 var(--text);
+    box-shadow: .175rem .175rem 0 var(--text);
     border: 1px solid var(--text);
     width: fit-content;
     cursor: pointer;
@@ -81,6 +92,10 @@ select {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    svg {
+        height: 1.25rem;
+        width: 1.25rem;
+    }
 }
 
 /* Elemente */

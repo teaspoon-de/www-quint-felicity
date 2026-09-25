@@ -9,15 +9,13 @@
     padding-top: 0px;
 
     img {
+        display: block;
         z-index: 495;
         width: 100%;
     }
-    .slogan {
+    .head {
         padding: 2rem 0 1rem;
-        text-align: center;
         font-size: 2rem;
-        font-weight: 500;
-        font-family: var(--fontHead);
     }
     div {
         display: flex;
@@ -26,8 +24,61 @@
         gap: 20px;
     }
     div p {
-        font-size: 1.5rem;
-        margin-bottom: .4rem;
+        font-size: 1.25rem;
+        margin-bottom: .2rem;
+    }
+}
+
+.article-short {
+    padding: .5rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    img {
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        flex-basis: 8rem;
+        width: 7rem;
+        height: 7rem;
+        box-shadow: .175rem .175rem 0 var(--text);
+    }
+    article {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: .25rem;
+        overflow: hidden;
+
+        .head {
+            width: 100%;
+            font-size: 1.25rem;
+            line-height: 2rem;
+            margin-bottom: -.5rem;
+            overflow: visible;
+            text-align: left;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow-x: hidden;
+        }
+        .head:hover {text-decoration: underline;}
+        .date {
+            font-size: .75rem;
+            line-height: .75rem;
+            color: var(--textCon);
+        }
+        p {
+            max-height: 3.5rem;
+            font-size: .875rem;
+            line-height: 1.125rem;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .button {
+            font-size: .875rem;
+        }
     }
 }
 
@@ -47,10 +98,6 @@ article.eventInfo p {
     font-size: 30px;
 }
 
-#heroM {
-    display: block;
-}
-
 
 @media only screen and (min-width: 1300px) {
     #heroM {
@@ -59,9 +106,6 @@ article.eventInfo p {
         object-fit: cover;
         object-position: center 42%;
     }
-    /*#hero {
-        display: block;
-    }*/
     #intro {
         padding-bottom: 0px;
     }
@@ -115,9 +159,5 @@ article.eventInfo p {
         background-color: var(--bg);
         box-shadow: 5px 5px 0px var(--text);
         border-color: var(--text);
-    }
-
-    footer {
-        padding-top: 40px;
     }
 }

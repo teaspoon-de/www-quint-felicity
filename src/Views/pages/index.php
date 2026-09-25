@@ -174,7 +174,7 @@ if ($event) {
 <section id="aktuelles">
     <div class="container">
         <a href="/blog"><h2 class="head">AKTUELLES</h2></a>
-        <a href="/blog" class="button">
+        <a href="/blog" class="all button">
             Alle Artikel anzeigen
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
         </a>
@@ -221,27 +221,27 @@ if ($event) {
 </section>
 
 <?php if (count($blogposts) > 0) echo '
-<section id="aktuelles" class="artShort '.getArticleCol($count).'">
-    <a href="/blog"><h2 class="secTitle unselectable">AKTUELLES</h2></a>
-    <a href="/blog" class="button '.getArticleCol($count).'" style="margin-top: -20px;">
+<section id="aktuelles">
+    <a href="/blog"><h2 class="head">AKTUELLES</h2></a>
+    <a href="/blog" class="button">
         Alle Artikel anzeigen
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
     </a>
     ';?>
     <?php foreach($blogposts as $post): ?>
-    <article>
+    <div class="article-short">
         <img
             src="<?= "/resources/uploads/".htmlspecialchars($post['cover_uri'] ?? '') ?>"
             alt="<?= htmlspecialchars($post['cover_alt'] ?? '') ?>"
             loading="lazy"
         >
-        <div>
-            <a href="/blog/<?=$post['slug']?>"><h3 class="title"># <?=htmlspecialchars($post['title']) ?></h3></a>
-            <date>- <?= date('Y-m-d', strtotime($post['date'])) ?> -</date>
+        <article>
+            <a href="/blog/<?=$post['slug']?>"><h3 class="head"># <?=htmlspecialchars($post['title']) ?></h3></a>
+            <p class="date">- <?= date('Y-m-d', strtotime($post['date'])) ?> -</p>
             <p><?= substr(htmlspecialchars(substr(explode('</p>', $post['content'])[0], strlen('<article><p>')) ?? ''), 0, 512) ?></p>
-            <a href="/blog/<?= $post['slug']?>" class="button <?= getArticleCol($count)?>">Mehr lesen</a>
-        </div>
-    </article>
+            <a href="/blog/<?= $post['slug']?>" class="button">Mehr lesen</a>
+        </article>
+    </div>
     <?php endforeach; ?>
 <?php if (count($blogposts) > 0) {
     echo '</section>';
